@@ -205,11 +205,13 @@ Lien vers la documentation officielle : [https://developer.mozilla.org/fr/docs/W
 
 ## `Math.PI` - la constante π
 
-Description à faire par vos soins...
-
+En Javascript, *Math.PI* est une constante contenant la valeur de π.
 ```javascript
-A FAIRE PAR VOS SOINS...
-SIMPLE, DROIT AU BUT, UTILE, STYLE PENSE-BÊTE
+// Exemple : calculer la circonférence d’un cercle
+let rayon = 5;
+let circonference = 2 * Math.PI * rayon;
+console.log("La circonférence du cercle est : " + circonference);
+
 ```
 
 ## `Math.abs()` - la \|valeur absolue\| d'un nombre
