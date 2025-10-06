@@ -216,35 +216,46 @@ console.log("La circonférence du cercle est : " + circonference);
 
 ## `Math.abs()` - la \|valeur absolue\| d'un nombre
 
-Description à faire par vos soins...
-
+En JavaScript, *Math.abs()* est une fonction qui renvoie la valeur absolue d’un nombre — c’est-à-dire le nombre sans son signe.
 ```javascript
-A FAIRE PAR VOS SOINS...
-SIMPLE, DROIT AU BUT, UTILE, STYLE PENSE-BÊTE
+console.log(Math.abs(-5)); // 5
+console.log(Math.abs(5));  // 5
+console.log(Math.abs(0));  // 0
 ```
 
 ## `Math.pow()` - élever à une puissance
 
-Description à faire par vos soins...
-
+Math.pow(x, y) calcule x élevé à la puissance y, c’est-à-dire x^y
 ```javascript
-A FAIRE PAR VOS SOINS...
-SIMPLE, DROIT AU BUT, UTILE, STYLE PENSE-BÊTE
+console.log(Math.pow(5, 3));
+// Expected output: 125
+
+console.log(Math.pow(4, 0.5));
+// Expected output: 2
+
+console.log(Math.pow(7, -2));
+// Expected output: 0.02040816326530612
+//                  (1/49)
+
+console.log(Math.pow(-7, 0.5));
+// Expected output: NaN
+
 ```
 
 ## `Math.min()` - plus petite valeur
 
-Description à faire par vos soins...
-
+La fonction *Math.min()* renvoie le plus petit nombre d'une série de 0 ou plusieurs nombres ou bien NaN si au moins un des arguments fourni n'est pas un nombre ou ne peut pas être converti en nombre.
 ```javascript
-A FAIRE PAR VOS SOINS...
-SIMPLE, DROIT AU BUT, UTILE, STYLE PENSE-BÊTE
+console.log(Math.min(2, 3, 1));
+// Expected output: 1
+
+console.log(Math.min(-2, -3, -1));
+// Expected output: -3
 ```
 
 ## `Math.max()` - plus grande valeur
 
-Description à faire par vos soins...
-
+La méthode statique Math.max() renvoie le plus grand nombre parmi ceux passés en paramètres, ou -Infinity si aucun paramètre n'est fourni.
 ```javascript
 A FAIRE PAR VOS SOINS...
 SIMPLE, DROIT AU BUT, UTILE, STYLE PENSE-BÊTE
@@ -252,11 +263,21 @@ SIMPLE, DROIT AU BUT, UTILE, STYLE PENSE-BÊTE
 
 ## `Math.ceil()` - arrondir à la prochaine valeur entière la plus proche
 
-Description à faire par vos soins...
+La fonction Math.ceil() retourne le plus petit entier plus grand ou égal au nombre donné.
 
 ```javascript
-A FAIRE PAR VOS SOINS...
-SIMPLE, DROIT AU BUT, UTILE, STYLE PENSE-BÊTE
+console.log(Math.ceil(0.95));
+// Expected output: 1
+
+console.log(Math.ceil(4));
+// Expected output: 4
+
+console.log(Math.ceil(7.004));
+// Expected output: 8
+
+console.log(Math.ceil(-7.004));
+// Expected output: -7
+
 ```
 
 ## `Math.floor()` - arrondir à la précédente valeur entière la plus proche
