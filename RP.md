@@ -257,8 +257,8 @@ console.log(Math.min(-2, -3, -1));
 
 La méthode statique Math.max() renvoie le plus grand nombre parmi ceux passés en paramètres, ou -Infinity si aucun paramètre n'est fourni.
 ```javascript
-A FAIRE PAR VOS SOINS...
-SIMPLE, DROIT AU BUT, UTILE, STYLE PENSE-BÊTE
+console.log(Math.max(3, 7, 2)); // 7
+
 ```
 
 ## `Math.ceil()` - arrondir à la prochaine valeur entière la plus proche
@@ -280,49 +280,53 @@ console.log(Math.ceil(-7.004));
 
 ```
 
-## `Math.floor()` - arrondir à la précédente valeur entière la plus proche
+## `Math.floor()` - arrondir à l'entier inférieur le plus proche
 
-Description à faire par vos soins...
+Renvoie le plus grand entier **inférieur ou égal** au nombre donné.
 
 ```javascript
-A FAIRE PAR VOS SOINS...
-SIMPLE, DROIT AU BUT, UTILE, STYLE PENSE-BÊTE
+console.log(Math.floor(4.7)); // 4
+console.log(Math.floor(9.2)); // 9
+console.log(Math.floor(-3.8)); // -4
+
 ```
 
-## `Math.round()` - arrondir à la valeur entière la plus proche
+## `Math.round()` - arrondir à l'entier le plus proche
 
-Description à faire par vos soins...
+Renvoie l'entier le plus proche du nombre fourni.
 
 ```javascript
-A FAIRE PAR VOS SOINS...
-SIMPLE, DROIT AU BUT, UTILE, STYLE PENSE-BÊTE
+console.log(Math.round(4.3)); // 4
+console.log(Math.round(4.7)); // 5
+console.log(Math.round(-3.5)); // -3
+
 ```
 
 ## `Math.trunc()` - supprime la virgule et retourne la partie entière d'un nombre
 
-Description à faire par vos soins...
-
+Supprime la partie décimale d’un nombre, sans arrondir.
 ```javascript
-A FAIRE PAR VOS SOINS...
-SIMPLE, DROIT AU BUT, UTILE, STYLE PENSE-BÊTE
+console.log(Math.trunc(4.9));  // 4
+console.log(Math.trunc(-3.7)); // -3
+
 ```
 
 ## `Math.sqrt()` - la raçine carrée d'un nombre
 
-Description à faire par vos soins...
-
+Renvoie la racine carrée positive d’un nombre.
 ```javascript
-A FAIRE PAR VOS SOINS...
-SIMPLE, DROIT AU BUT, UTILE, STYLE PENSE-BÊTE
+console.log(Math.sqrt(9));  // 3
+console.log(Math.sqrt(16)); // 4
+
 ```
 
 ## `Math.random()` - générer un nombre aléatoire entre 0.0 (compris) et 1.0 (non compris)
 
-Description à faire par vos soins...
-
+Renvoie un nombre flottant ≥ 0 et < 1.
 ```javascript
-A FAIRE PAR VOS SOINS...
-SIMPLE, DROIT AU BUT, UTILE, STYLE PENSE-BÊTE
+console.log(Math.random()); // Exemple : 0.435672
+console.log(Math.random() * 10); // Exemple : 7.12 (entre 0 et 10)
+
 ```
 
 <svg height="12" width="100%" style="padding-top:2em;padding-bottom:1em">
@@ -333,22 +337,25 @@ SIMPLE, DROIT AU BUT, UTILE, STYLE PENSE-BÊTE
 
 Lien vers la documentation officielle : [https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Global_Objects/JSON](https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Global_Objects/JSON)
 
-## `JSON.stringify()` - transformer un objet Javascript en JSON
 
-Description à faire par vos soins...
+## `JSON.stringify()` - transformer un objet JavaScript en JSON
+
+Convertit un objet JavaScript en **chaîne JSON**.
 
 ```javascript
-A FAIRE PAR VOS SOINS...
-SIMPLE, DROIT AU BUT, UTILE, STYLE PENSE-BÊTE
+const personne = { nom: "Alice", age: 25 };
+const json = JSON.stringify(personne);
+console.log(json); // '{"nom":"Alice","age":25}'
 ```
 
 ## `JSON.parse()` - transformer du JSON en objet Javascript
 
-Description à faire par vos soins...
-
+Convertit une **chaîne JSON** en objet JavaScript utilisable.
 ```javascript
-A FAIRE PAR VOS SOINS...
-SIMPLE, DROIT AU BUT, UTILE, STYLE PENSE-BÊTE
+const json = '{"nom":"Alice","age":25}';
+const personne = JSON.parse(json);
+console.log(personne.nom); // Alice
+
 ```
 
 <svg height="12" width="100%" style="padding-top:2em;padding-bottom:1em">
@@ -361,29 +368,33 @@ Lien vers la documentation officielle : [https://developer.mozilla.org/fr/docs/W
 
 ## `split()` - un ciseau qui coupe une chaîne là où un caractère apparaît et produit un tableau
 
-Description à faire par vos soins...
+Divise une chaîne en **tableau** selon un séparateur.
 
 ```javascript
-A FAIRE PAR VOS SOINS...
-SIMPLE, DROIT AU BUT, UTILE, STYLE PENSE-BÊTE
+const texte = "pomme,banane,cerise";
+const fruits = texte.split(",");
+console.log(fruits); // ["pomme", "banane", "cerise"]
 ```
 
 ## `trim()`, `trimStart()` et `trimEnd()` - épuration des espaces en trop dans une chaîne (trimming)
 
-Description à faire par vos soins...
-
+- trim() → supprime espaces début et fin
+- trimStart() → supprime espaces début
+- trimEnd() → supprime espaces fin
 ```javascript
-A FAIRE PAR VOS SOINS...
-SIMPLE, DROIT AU BUT, UTILE, STYLE PENSE-BÊTE
+const texte = "   hello world   ";
+console.log(texte.trim());      // "hello world"
+console.log(texte.trimStart()); // "hello world   "
+console.log(texte.trimEnd());   // "   hello world"
 ```
 
 ## `padStart()` et `padEnd()` - aligner le contenu dans une chaîne de caractères
 
-Description à faire par vos soins...
-
+Ajoute des caractères **au début** ou à **la fin** pour atteindre une longueur donnée.
 ```javascript
-A FAIRE PAR VOS SOINS...
-SIMPLE, DROIT AU BUT, UTILE, STYLE PENSE-BÊTE
+const num = "5";
+console.log(num.padStart(3, "0")); // "005"
+console.log(num.padEnd(3, "-"));   // "5--"
 ```
 
 <svg height="12" width="100%" style="padding-top:2em;padding-bottom:1em">
@@ -400,31 +411,39 @@ Lien vers la documentation officielle : [https://developer.mozilla.org/fr/docs/W
 console.log('Coucou !'); // Coucou !
 ```
 
-## `console.info()`, `warn()` et `error()` - Afficher un message sur la console (filtrables)
+## `console.info()`, `console.warn()` et `console.error()` - Afficher un message sur la console (filtrables)
 
-Description à faire par vos soins...
+- `console.info()` → message informatif  
+- `console.warn()` → avertissement  
+- `console.error()` → erreur
 
 ```javascript
-A FAIRE PAR VOS SOINS...
-SIMPLE, DROIT AU BUT, UTILE, STYLE PENSE-BÊTE
+console.info("Info : opération réussie");
+console.warn("Attention : valeur inattendue");
+console.error("Erreur : impossible de charger le fichier");
 ```
 
 ## `console.table()` - Afficher tout un tableau ou un objet sur la console
 
-Description à faire par vos soins...
-
+Affiche un **tableau ou un objet** sous forme de tableau lisible.
 ```javascript
-A FAIRE PAR VOS SOINS...
-SIMPLE, DROIT AU BUT, UTILE, STYLE PENSE-BÊTE
+const personnes = [
+  { nom: "Alice", age: 25 },
+  { nom: "Bob", age: 30 }
+];
+console.table(personnes);
 ```
 
 ## `console.time()`, `timeLog()` et `timeEnd()` - Chronométrer une durée d'exécution
 
-Description à faire par vos soins...
+Mesure le temps d’exécution d’un code.
 
 ```javascript
-A FAIRE PAR VOS SOINS...
-SIMPLE, DROIT AU BUT, UTILE, STYLE PENSE-BÊTE
+console.time("test");
+for(let i=0;i<100000;i++){}  // code à mesurer
+console.timeLog("test");      // temps intermédiaire
+console.timeEnd("test");      // temps total
+
 ```
 
 <svg height="12" width="100%" style="padding-top:2em;padding-bottom:1em">
@@ -437,47 +456,54 @@ Lien vers la documentation officielle : [https://developer.mozilla.org/fr/docs/W
 
 ## `forEach` - parcourir les éléments d'un tableau
 
-Description à faire par vos soins...
+Exécute une fonction pour chaque élément du tableau.
 
 ```javascript
-A FAIRE PAR VOS SOINS...
-SIMPLE, DROIT AU BUT, UTILE, STYLE PENSE-BÊTE
+const fruits = ["pomme", "banane", "cerise"];
+fruits.forEach(fruit => console.log(fruit));
 ```
 
 ## `entries()` - parcourir les couples index/valeurs d'un tableau
 
-Description à faire par vos soins...
-
+Renvoie un **itérateur** donnant [index, valeur].
 ```javascript
-A FAIRE PAR VOS SOINS...
-SIMPLE, DROIT AU BUT, UTILE, STYLE PENSE-BÊTE
+const fruits = ["pomme", "banane"];
+for (const [i, fruit] of fruits.entries()) {
+  console.log(i, fruit);
+}
+
 ```
 
 ## `in` - parcourir les clés d'un tableau
 
-Description à faire par vos soins...
-
+Parcourt les indices du tableau.
 ```javascript
-A FAIRE PAR VOS SOINS...
-SIMPLE, DROIT AU BUT, UTILE, STYLE PENSE-BÊTE
+const fruits = ["pomme", "banane"];
+for (const i in fruits) {
+  console.log(i); // 0, 1
+}
+
 ```
 
 ## `of` - parcourir les valeurs d'un tableau
 
-Description à faire par vos soins...
-
+Parcourt directement les **valeurs** du tableau.
 ```javascript
-A FAIRE PAR VOS SOINS...
-SIMPLE, DROIT AU BUT, UTILE, STYLE PENSE-BÊTE
+const fruits = ["pomme", "banane"];
+for (const fruit of fruits) {
+  console.log(fruit); // "pomme", "banane"
+}
+
 ```
 
 ## `find()` - premier élément qui satisfait une condition
 
-Description à faire par vos soins...
-
+Renvoie le **premier élément** pour lequel la fonction renvoie true.
 ```javascript
-A FAIRE PAR VOS SOINS...
-SIMPLE, DROIT AU BUT, UTILE, STYLE PENSE-BÊTE
+const nombres = [5, 12, 8, 130];
+const premierGrand10 = nombres.find(n => n > 10);
+console.log(premierGrand10); // 12
+
 ```
 
 ## `findIndex()` - premier index qui satisfait une condition
