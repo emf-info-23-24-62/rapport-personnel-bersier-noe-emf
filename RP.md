@@ -1,9 +1,9 @@
 <h1>🤔 RP - 323 - Programmation fonctionnelle</h1>
 
 >[!TIP]
->**Référence Javascript:** <https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference>  
->**Tester du code JS** : <https://runjs.app/play>  
->**Convertir en PDF** : <https://marketplace.visualstudio.com/items?itemName=manuth.markdown-converter>
+>Référence Javascript: <https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference>  
+>Tester du code JS : <https://runjs.app/play>  
+>Convertir en PDF : <https://marketplace.visualstudio.com/items?itemName=manuth.markdown-converter>
 
 <h1>Table des matières</h1>
 
@@ -86,7 +86,7 @@ Pendant 5 semaines (1,5 jour par semaine), je vais :
 - Découvrir les paradigmes de programmation et l’intérêt de la programmation fonctionnelle  
 - Utiliser les fonctions de base comme `map`, `filter` et `reduce`  
 - Appliquer des concepts comme fonctions pures, immuabilité, closures, currying et récursion
-- Mettre en pratique les **bonnes pratiques et patterns** 
+- Mettre en pratique les bonnes pratiques et patterns 
 
 
 # Opérateurs javascript super-cooool 😎
@@ -114,7 +114,7 @@ const foo2 = 0 ?? 42; // 0
 >[!CAUTION]
 >Contrairement à l'opérateur logique OU (`||`), l'opérande de gauche sera également renvoyé s'il s'agit d'une valeur équivalente à `false` et pas seulement `null` et `undefined`.
 >
->⚠️ En d'autres termes **ATTENTION** ‼️ lors de l'utilisation de `||` pour fournir une valeur par défaut à une variable, car on peut rencontrer des comportements inattendus lorsqu'on considère certaines valeurs comme correctes et utilisables (par exemple une chaine vide `''` ou `0`) ‼️
+>⚠️ En d'autres termes ATTENTION ‼️ lors de l'utilisation de `||` pour fournir une valeur par défaut à une variable, car on peut rencontrer des comportements inattendus lorsqu'on considère certaines valeurs comme correctes et utilisables (par exemple une chaine vide `''` ou `0`) ‼️
 
 ```javascript
 const foo3 = 0 || 42; // 42 => ATTENTION !
@@ -127,7 +127,7 @@ const foo6 = '' || 'salut !'; // 'salut !' => ATTENTION !
 
 Cet opérateur logique se nomme l'opérateur d'affectation de "coalescence des nuls", également connu sous le nom d'opérateur affectation logique nulle.
 
-> Évalue l'opérande de droite et l'attribue à gauche **UNIQUEMENT si l'opérande de gauche est nulle** (`null` ou `undefined`).
+> Évalue l'opérande de droite et l'attribue à gauche UNIQUEMENT si l'opérande de gauche est nulle (`null` ou `undefined`).
 
 ```javascript
 const a = { duration: 50 };
@@ -165,7 +165,7 @@ const myUpdatedVehicle = { ...myVehicle, ...updateMyVehicle };
 
 ## Déstructuration
 
-L'opérateur de décomposition spread `...` sert aussi à isoler certains éléments afin de les utiliser ensuite, et de **mettre le reste** d'un coup ailleurs.
+L'opérateur de décomposition spread `...` sert aussi à isoler certains éléments afin de les utiliser ensuite, et de mettre le reste d'un coup ailleurs.
 
 ```javascript
 const valeurs = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
@@ -290,7 +290,7 @@ console.log(Math.ceil(-7.004));
 
 ## `Math.floor()` - arrondir à l'entier inférieur le plus proche
 
-Renvoie le plus grand entier **inférieur ou égal** au nombre donné.
+Renvoie le plus grand entier inférieur ou égal au nombre donné.
 
 ```javascript
 console.log(Math.floor(4.7)); // 4
@@ -348,7 +348,7 @@ Lien vers la documentation officielle : [https://developer.mozilla.org/fr/docs/W
 
 ## `JSON.stringify()` - transformer un objet JavaScript en JSON
 
-Convertit un objet JavaScript en **chaîne JSON**.
+Convertit un objet JavaScript en chaîne JSON.
 
 ```javascript
 const personne = { nom: "Alice", age: 25 };
@@ -358,7 +358,7 @@ console.log(json); // '{"nom":"Alice","age":25}'
 
 ## `JSON.parse()` - transformer du JSON en objet Javascript
 
-Convertit une **chaîne JSON** en objet JavaScript utilisable.
+Convertit une chaîne JSON en objet JavaScript utilisable.
 ```javascript
 const json = '{"nom":"Alice","age":25}';
 const personne = JSON.parse(json);
@@ -376,7 +376,7 @@ Lien vers la documentation officielle : [https://developer.mozilla.org/fr/docs/W
 
 ## `split()` - un ciseau qui coupe une chaîne là où un caractère apparaît et produit un tableau
 
-Divise une chaîne en **tableau** selon un séparateur.
+Divise une chaîne en tableau selon un séparateur.
 
 ```javascript
 const texte = "pomme,banane,cerise";
@@ -398,7 +398,7 @@ console.log(texte.trimEnd());   // "   hello world"
 
 ## `padStart()` et `padEnd()` - aligner le contenu dans une chaîne de caractères
 
-Ajoute des caractères **au début** ou à **la fin** pour atteindre une longueur donnée.
+Ajoute des caractères au début ou à la fin pour atteindre une longueur donnée.
 ```javascript
 const num = "5";
 console.log(num.padStart(3, "0")); // "005"
@@ -433,7 +433,7 @@ console.error("Erreur : impossible de charger le fichier");
 
 ## `console.table()` - Afficher tout un tableau ou un objet sur la console
 
-Affiche un **tableau ou un objet** sous forme de tableau lisible.
+Affiche un tableau ou un objet sous forme de tableau lisible.
 ```javascript
 const personnes = [
   { nom: "Alice", age: 25 },
@@ -473,7 +473,7 @@ fruits.forEach(fruit => console.log(fruit));
 
 ## `entries()` - parcourir les couples index/valeurs d'un tableau
 
-Renvoie un **itérateur** donnant [index, valeur].
+Renvoie un itérateur donnant [index, valeur].
 ```javascript
 const fruits = ["pomme", "banane"];
 for (const [i, fruit] of fruits.entries()) {
@@ -495,7 +495,7 @@ for (const i in fruits) {
 
 ## `of` - parcourir les valeurs d'un tableau
 
-Parcourt directement les **valeurs** du tableau.
+Parcourt directement les valeurs du tableau.
 ```javascript
 const fruits = ["pomme", "banane"];
 for (const fruit of fruits) {
@@ -506,7 +506,7 @@ for (const fruit of fruits) {
 
 ## `find()` - premier élément qui satisfait une condition
 
-Renvoie le **premier élément** pour lequel la fonction renvoie true.
+Renvoie le premier élément pour lequel la fonction renvoie true.
 ```javascript
 const nombres = [5, 12, 8, 130];
 const premierGrand10 = nombres.find(n => n > 10);
@@ -516,7 +516,7 @@ console.log(premierGrand10); // 12
 
 ## `findIndex()` - premier index qui satisfait une condition
 
-Renvoie **l’index** du premier élément qui vérifie la condition, ou **-1** si aucun ne correspond.
+Renvoie l’index du premier élément qui vérifie la condition, ou -1 si aucun ne correspond.
 
 ```javascript
 const nombres = [5, 12, 8, 130];
@@ -527,7 +527,7 @@ console.log(index); // 1
 
 ## `indexOf()` et `lastIndexOf()` - premier/dernier élément qui correspond
 
-Cherchent la **position** d’un élément dans un tableau.  
+Cherchent la position d’un élément dans un tableau.  
 - `indexOf()` → première occurrence  
 - `lastIndexOf()` → dernière occurrence  
 
@@ -540,10 +540,10 @@ console.log(nombres.lastIndexOf(2));  // 3
 ## `push()`, `pop()`, `shift()` et `unshift()` - ajouter/supprimer au début/fin d’un tableau
 
 Permettent d’ajouter ou retirer des éléments d’un tableau :  
-- `push()` → ajoute à la **fin**  
-- `pop()` → supprime à la **fin**  
-- `unshift()` → ajoute au **début**  
-- `shift()` → supprime au **début**
+- `push()` → ajoute à la fin  
+- `pop()` → supprime à la fin  
+- `unshift()` → ajoute au début  
+- `shift()` → supprime au début
 
 ```javascript
 const fruits = ["pomme", "banane"];
@@ -560,7 +560,7 @@ fruits.shift();         // ["pomme", "banane"]
 
 ## `slice()` - ne conserver que certaines parties d'un tableau
 
-Crée une **copie** d’une portion du tableau, sans le modifier.
+Crée une copie d’une portion du tableau, sans le modifier.
 
 ```javascript
 const fruits = ["pomme", "banane", "cerise", "kiwi"];
@@ -570,7 +570,7 @@ console.log(partie); // ["banane", "cerise"]
 ```
 ## `splice()` - supprimer/insérer/remplacer des valeurs dans un tableau
 
-Modifie le **tableau d’origine** : peut supprimer, insérer ou remplacer des éléments.
+Modifie le tableau d’origine : peut supprimer, insérer ou remplacer des éléments.
 
 ```javascript
 const fruits = ["pomme", "banane", "cerise"];
@@ -590,7 +590,7 @@ console.log(fruits); // ["pomme", "mangue", "cerise"]
 
 ## `concat()` - joindre deux tableaux
 
-Crée un **nouveau tableau** en combinant plusieurs tableaux ou valeurs.
+Crée un nouveau tableau en combinant plusieurs tableaux ou valeurs.
 
 ```javascript
 const fruits = ["pomme", "banane"];
@@ -602,7 +602,7 @@ console.log(aliments); // ["pomme", "banane", "carotte", "tomate"]
 
 ## `join()` - joindre des chaînes de caractères
 
-Transforme un **tableau en une seule chaîne**, en séparant les éléments avec un délimiteur.
+Transforme un tableau en une seule chaîne, en séparant les éléments avec un délimiteur.
 
 ```javascript
 const fruits = ["pomme", "banane", "cerise"];
@@ -613,7 +613,7 @@ console.log(texte); // "pomme, banane, cerise"
 
 ## `keys()` et `values()` - les clés/valeurs d'un objet
 
-Permettent d’obtenir les **clés** (`keys()`) ou les **valeurs** (`values()`) d’un objet sous forme de tableau.
+Permettent d’obtenir les clés (`keys()`) ou les valeurs (`values()`) d’un objet sous forme de tableau.
 
 ```javascript
 const personne = { nom: "Alice", age: 25, ville: "Paris" };
@@ -636,8 +636,8 @@ console.log(fruits.includes("kiwi"));   // false
 
 ## `every()` et `some()` - vérifier si toutes/quelques valeurs respectent une condition
 
-- `every()` → renvoie `true` si **tous** les éléments respectent la condition.  
-- `some()` → renvoie `true` si **au moins un** élément la respecte.
+- `every()` → renvoie `true` si tous les éléments respectent la condition.  
+- `some()` → renvoie `true` si au moins un élément la respecte.
 
 ```javascript
 const nombres = [2, 4, 6, 8];
@@ -649,7 +649,7 @@ console.log(nombres.some(n => n > 5));        // true (au moins un > 5)
 
 ## `fill()` - remplir un tableau avec des valeurs
 
-Remplit un **tableau existant** avec une valeur fixe, éventuellement sur une portion définie.
+Remplit un tableau existant avec une valeur fixe, éventuellement sur une portion définie.
 
 ```javascript
 //tableau.fill(valeur, debut, fin)
@@ -661,7 +661,7 @@ tab.fill(5, 1, 3);    // [0, 5, 5, 0] → remplace indices 1 et 2
 
 ## `flat()` - aplatir un tableau
 
-Transforme un tableau **imbriqué** en un tableau à une seule dimension (ou plusieurs niveaux).
+Transforme un tableau imbriqué en un tableau à une seule dimension (ou plusieurs niveaux).
 
 
 ```javascript
@@ -672,8 +672,8 @@ console.log(tab.flat(2));     // [1, 2, 3, 4, 5, 6]
 
 ## `sort()` - pour trier un tableau
 
-Trie les éléments **du tableau**. Par défaut, les éléments sont triés en **ordre lexicographique**.  
-Pour un tri numérique, il faut fournir une **fonction de comparaison**.
+Trie les éléments du tableau. Par défaut, les éléments sont triés en ordre lexicographique.  
+Pour un tri numérique, il faut fournir une fonction de comparaison.
 
 ```javascript
 const nombres = [10, 5, 20, 1];
@@ -686,7 +686,7 @@ console.log(nombres); // [1, 5, 10, 20] → ordre croissant numérique
 
 ## `map()` - créer un tableau avec les résultats d'une fonction
 
-Applique une **fonction à chaque élément** d’un tableau et renvoie un **nouveau tableau** avec les résultats.
+Applique une fonction à chaque élément d’un tableau et renvoie un nouveau tableau avec les résultats.
 
 ```javascript
 const nombres = [1, 2, 3, 4];
@@ -702,7 +702,7 @@ console.log(doubles); // [2, 4, 6, 8]
 ```
 ## `filter()` - tableau avec les éléments passant un test
 
-Crée un **nouveau tableau** ne contenant que les éléments qui satisfont une condition spécifique.
+Crée un nouveau tableau ne contenant que les éléments qui satisfont une condition spécifique.
 
 ```javascript
 const nombres = [1, 2, 3, 4, 5];
@@ -717,7 +717,7 @@ console.log(pairs); // [2, 4]
 ```
 ## `groupBy()` - regroupe les éléments d'un tableau selon une règle
 
-Crée un **objet** où les clés correspondent au résultat de la fonction appliquée à chaque élément, et les valeurs sont des **tableaux d’éléments correspondants**.
+Crée un objet où les clés correspondent au résultat de la fonction appliquée à chaque élément, et les valeurs sont des tableaux d’éléments correspondants.
 
 ```javascript
 const nombres = [6.1, 4.2, 6.3];
@@ -732,7 +732,7 @@ const result = groupBy(empereurs, (empereur) => empereur.dynasty);
 
 ## `flatMap()` - chaînage de `map()` et `flat()`
 
-Applique une fonction à chaque élément du tableau **comme `map()`**, puis **aplatit** le résultat d’un niveau.
+Applique une fonction à chaque élément du tableau comme `map()`, puis aplatit le résultat d’un niveau.
 
 ```javascript
 const phrases = ["Bonjour le monde", "Salut tout le monde"];
@@ -744,7 +744,7 @@ console.log(mots);
 
 ## `reduce()` et `reduceRight()` - réduire un tableau à une seule valeur
 
-Applique une **fonction cumulatrice** sur chaque élément du tableau pour produire **une seule valeur finale**.  
+Applique une fonction cumulatrice sur chaque élément du tableau pour produire une seule valeur finale.  
 - `reduce()` → de gauche à droite  
 - `reduceRight()` → de droite à gauche
 
@@ -763,7 +763,7 @@ console.log(texte); // "cba"
 
 ## `reverse()` - inverser l'ordre du tableau
 
-Inverse **directement** l’ordre des éléments dans le tableau.
+Inverse directement l’ordre des éléments dans le tableau.
 
 ```javascript
 const nombres = [1, 2, 3, 4];
@@ -779,9 +779,9 @@ console.log(nombres); // [4, 3, 2, 1]
 
 ## `` (backticks) - pour écrire des chaînes plus pratiques
 
-Les **backticks** (`` ` ``) permettent de créer des chaînes de caractères **faciles à lire**, où l’on peut :  
-- Mettre directement des **variables** ou des calculs dedans  
-- Écrire du texte **sur plusieurs lignes**  
+Les backticks (`` ` ``) permettent de créer des chaînes de caractères faciles à lire, où l’on peut :  
+- Mettre directement des variables ou des calculs dedans  
+- Écrire du texte sur plusieurs lignes  
 
 ```javascript
 const nom = "Alice";
@@ -806,7 +806,7 @@ console.log(multiLignes);
 
 ## `new Set()` - pour supprimer les doublons
 
-Crée un **ensemble** contenant uniquement des valeurs uniques. Très pratique pour enlever les doublons d’un tableau.
+Crée un ensemble contenant uniquement des valeurs uniques. Très pratique pour enlever les doublons d’un tableau.
 
 ```javascript
 const nombres = [1, 2, 2, 3, 4, 4, 5];
@@ -823,7 +823,7 @@ console.log(unique); // [1, 2, 3, 4, 5]
 
 ## Déclaration de fonction
 
-**Standard**
+Standard
 
 ```javascript
 function doStuff(a, b, c) {
@@ -831,7 +831,7 @@ function doStuff(a, b, c) {
 }
 ```
 
-**Sous forme d'expression de fonction**
+Sous forme d'expression de fonction
 
 ```javascript
 const doStuff = function (a, b, c) {
@@ -839,7 +839,7 @@ const doStuff = function (a, b, c) {
 };
 ```
 
-**Sous forme d'expression de fonction anonyme**
+Sous forme d'expression de fonction anonyme
 
 ```javascript
 const doStuff = (a, b, c) => {
@@ -847,7 +847,7 @@ const doStuff = (a, b, c) => {
 };
 ```
 
-**Sous forme raccourcie**
+Sous forme raccourcie
 
 S'il n'y a qu'un seul argument et que son corps n'a qu'une seule expression, on peut omettre le return et le corps de la fonction :
 
@@ -859,7 +859,7 @@ const doStuff = (a) => `Salut ${a} !`;
 
 IIFE = Immediately Invoked Function Expressions.
 
-Ces fonctions sont définies et **exécutées immédiatement**. Elles sont souvent utilisées pour créer un **contexte isolé** ou encapsuler du code sans polluer l’espace global.
+Ces fonctions sont définies et exécutées immédiatement. Elles sont souvent utilisées pour créer un contexte isolé ou encapsuler du code sans polluer l’espace global.
 
 ```javascript
 (function(){ ... })()
