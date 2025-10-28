@@ -79,7 +79,17 @@
 
 # Introduction
 
-> Votre introduction avec notamment les objectifs opérationnels du module.
+Dans ce module, je vais apprendre la **programmation fonctionnelle** et comprendre ses différences avec la programmation impérative. 
+
+Pendant 5 semaines (1,5 jour par semaine), je vais :
+
+- Découvrir les **paradigmes de programmation** et l’intérêt de la programmation fonctionnelle  
+- Utiliser les fonctions de base comme `map`, `filter` et `reduce`  
+- Appliquer des concepts comme **fonctions pures, immuabilité, closures, currying et récursion**  
+- Mettre en pratique les **bonnes pratiques et patterns** comme le builder pattern  
+- Tester et vérifier mes programmes pour garantir leur qualité  
+
+La formation combine théorie (PDF) et pratique (exercices GitHub, Visual Studio Code), afin que je puisse **lire, écrire, maintenir et optimiser du code fonctionnel**.
 
 # Opérateurs javascript super-cooool 😎
 
