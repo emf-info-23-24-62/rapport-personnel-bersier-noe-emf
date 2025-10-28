@@ -508,173 +508,259 @@ console.log(premierGrand10); // 12
 
 ## `findIndex()` - premier index qui satisfait une condition
 
-Description à faire par vos soins...
+Renvoie **l’index** du premier élément qui vérifie la condition, ou **-1** si aucun ne correspond.
 
 ```javascript
-A FAIRE PAR VOS SOINS...
-SIMPLE, DROIT AU BUT, UTILE, STYLE PENSE-BÊTE
+const nombres = [5, 12, 8, 130];
+const index = nombres.findIndex(n => n > 10);
+console.log(index); // 1
+
 ```
 
 ## `indexOf()` et `lastIndexOf()` - premier/dernier élément qui correspond
 
-Description à faire par vos soins...
+Cherchent la **position** d’un élément dans un tableau.  
+- `indexOf()` → première occurrence  
+- `lastIndexOf()` → dernière occurrence  
 
 ```javascript
-A FAIRE PAR VOS SOINS...
-SIMPLE, DROIT AU BUT, UTILE, STYLE PENSE-BÊTE
+const nombres = [1, 2, 3, 2, 4];
+console.log(nombres.indexOf(2));      // 1
+console.log(nombres.lastIndexOf(2));  // 3
 ```
 
-## `push()`, `pop()`, `shift()` et `unshift()` - ajouter/supprime au début/fin dans un tableau
+## `push()`, `pop()`, `shift()` et `unshift()` - ajouter/supprimer au début/fin d’un tableau
 
-Description à faire par vos soins...
+Permettent d’ajouter ou retirer des éléments d’un tableau :  
+- `push()` → ajoute à la **fin**  
+- `pop()` → supprime à la **fin**  
+- `unshift()` → ajoute au **début**  
+- `shift()` → supprime au **début**
 
 ```javascript
-A FAIRE PAR VOS SOINS...
-SIMPLE, DROIT AU BUT, UTILE, STYLE PENSE-BÊTE
+const fruits = ["pomme", "banane"];
+
+// Fin
+fruits.push("cerise");  // ["pomme", "banane", "cerise"]
+fruits.pop();           // ["pomme", "banane"]
+
+// Début
+fruits.unshift("kiwi"); // ["kiwi", "pomme", "banane"]
+fruits.shift();         // ["pomme", "banane"]
+
 ```
 
-## `slice()` - ne conserver que certaines lignes d'un tableau
+## `slice()` - ne conserver que certaines parties d'un tableau
 
-Description à faire par vos soins...
+Crée une **copie** d’une portion du tableau, sans le modifier.
 
 ```javascript
-A FAIRE PAR VOS SOINS...
-SIMPLE, DROIT AU BUT, UTILE, STYLE PENSE-BÊTE
-```
+const fruits = ["pomme", "banane", "cerise", "kiwi"];
+const partie = fruits.slice(1, 3);
+console.log(partie); // ["banane", "cerise"]
 
+```
 ## `splice()` - supprimer/insérer/remplacer des valeurs dans un tableau
 
-Description à faire par vos soins...
+Modifie le **tableau d’origine** : peut supprimer, insérer ou remplacer des éléments.
 
 ```javascript
-A FAIRE PAR VOS SOINS...
-SIMPLE, DROIT AU BUT, UTILE, STYLE PENSE-BÊTE
-```
+const fruits = ["pomme", "banane", "cerise"];
+
+// Supprimer 1 élément à partir de l’index 1
+fruits.splice(1, 1); 
+console.log(fruits); // ["pomme", "cerise"]
+
+// Insérer sans supprimer
+fruits.splice(1, 0, "kiwi");
+console.log(fruits); // ["pomme", "kiwi", "cerise"]
+
+// Remplacer un élément
+fruits.splice(1, 1, "mangue");
+console.log(fruits); // ["pomme", "mangue", "cerise"]
+
 
 ## `concat()` - joindre deux tableaux
 
-Description à faire par vos soins...
+Crée un **nouveau tableau** en combinant plusieurs tableaux ou valeurs.
 
 ```javascript
-A FAIRE PAR VOS SOINS...
-SIMPLE, DROIT AU BUT, UTILE, STYLE PENSE-BÊTE
+const fruits = ["pomme", "banane"];
+const legumes = ["carotte", "tomate"];
+const aliments = fruits.concat(legumes);
+console.log(aliments); // ["pomme", "banane", "carotte", "tomate"]
+
 ```
 
 ## `join()` - joindre des chaînes de caractères
 
-Description à faire par vos soins...
+Transforme un **tableau en une seule chaîne**, en séparant les éléments avec un délimiteur.
 
 ```javascript
-A FAIRE PAR VOS SOINS...
-SIMPLE, DROIT AU BUT, UTILE, STYLE PENSE-BÊTE
+const fruits = ["pomme", "banane", "cerise"];
+const texte = fruits.join(", ");
+console.log(texte); // "pomme, banane, cerise"
+
 ```
 
 ## `keys()` et `values()` - les clés/valeurs d'un objet
 
-Description à faire par vos soins...
+Permettent d’obtenir les **clés** (`keys()`) ou les **valeurs** (`values()`) d’un objet sous forme de tableau.
 
 ```javascript
-A FAIRE PAR VOS SOINS...
-SIMPLE, DROIT AU BUT, UTILE, STYLE PENSE-BÊTE
+const personne = { nom: "Alice", age: 25, ville: "Paris" };
+
+console.log(Object.keys(personne));   // ["nom", "age", "ville"]
+console.log(Object.values(personne)); // ["Alice", 25, "Paris"]
+
 ```
 
 ## `includes()` - vérifier si une valeur est présente dans un tableau
 
-Description à faire par vos soins...
+Renvoie `true` si le tableau contient la valeur recherchée, sinon `false`.
 
 ```javascript
-A FAIRE PAR VOS SOINS...
-SIMPLE, DROIT AU BUT, UTILE, STYLE PENSE-BÊTE
+const fruits = ["pomme", "banane", "cerise"];
+console.log(fruits.includes("banane")); // true
+console.log(fruits.includes("kiwi"));   // false
+
 ```
 
-## `every()` et `some()` - vérifier si plusieurs valeurs sont toutes/quelques présentes dans un tableau
+## `every()` et `some()` - vérifier si toutes/quelques valeurs respectent une condition
 
-Description à faire par vos soins...
+- `every()` → renvoie `true` si **tous** les éléments respectent la condition.  
+- `some()` → renvoie `true` si **au moins un** élément la respecte.
 
 ```javascript
-A FAIRE PAR VOS SOINS...
-SIMPLE, DROIT AU BUT, UTILE, STYLE PENSE-BÊTE
+const nombres = [2, 4, 6, 8];
+
+console.log(nombres.every(n => n % 2 === 0)); // true (tous pairs)
+console.log(nombres.some(n => n > 5));        // true (au moins un > 5)
+
 ```
 
 ## `fill()` - remplir un tableau avec des valeurs
 
-Description à faire par vos soins...
+Remplit un **tableau existant** avec une valeur fixe, éventuellement sur une portion définie.
 
 ```javascript
-A FAIRE PAR VOS SOINS...
-SIMPLE, DROIT AU BUT, UTILE, STYLE PENSE-BÊTE
+//tableau.fill(valeur, debut, fin)
+const tab = [1, 2, 3, 4];
+tab.fill(0);          // [0, 0, 0, 0]
+tab.fill(5, 1, 3);    // [0, 5, 5, 0] → remplace indices 1 et 2
+
 ```
 
 ## `flat()` - aplatir un tableau
 
-Description à faire par vos soins...
+Transforme un tableau **imbriqué** en un tableau à une seule dimension (ou plusieurs niveaux).
+
 
 ```javascript
-A FAIRE PAR VOS SOINS...
-SIMPLE, DROIT AU BUT, UTILE, STYLE PENSE-BÊTE
+const tab = [1, [2, 3], [4, [5, 6]]];
+console.log(tab.flat());      // [1, 2, 3, 4, [5, 6]]
+console.log(tab.flat(2));     // [1, 2, 3, 4, 5, 6]
 ```
 
 ## `sort()` - pour trier un tableau
 
-Description à faire par vos soins...
+Trie les éléments **du tableau**. Par défaut, les éléments sont triés en **ordre lexicographique**.  
+Pour un tri numérique, il faut fournir une **fonction de comparaison**.
 
 ```javascript
-A FAIRE PAR VOS SOINS...
-SIMPLE, DROIT AU BUT, UTILE, STYLE PENSE-BÊTE
+const nombres = [10, 5, 20, 1];
+nombres.sort();
+console.log(nombres); // [1, 10, 20, 5] → ordre lexicographique
+
+nombres.sort((a, b) => a - b);
+console.log(nombres); // [1, 5, 10, 20] → ordre croissant numérique
 ```
 
-## `map()` - tableau avec les résultats d'une fonction
+## `map()` - créer un tableau avec les résultats d'une fonction
 
-Description à faire par vos soins...
+Applique une **fonction à chaque élément** d’un tableau et renvoie un **nouveau tableau** avec les résultats.
 
 ```javascript
-A FAIRE PAR VOS SOINS...
-SIMPLE, DROIT AU BUT, UTILE, STYLE PENSE-BÊTE
+const nombres = [1, 2, 3, 4];
+const doubles = nombres.map(n => n * 2);
+console.log(doubles); // [2, 4, 6, 8]
 ```
+```javascript
+//Renvoie un tableau ne contenant que les marques de moto 
+  const listeMotos = dataMotos.map(moto =>
+        `${moto.marque}`
+    );
 
+```
 ## `filter()` - tableau avec les éléments passant un test
 
-Description à faire par vos soins...
+Crée un **nouveau tableau** ne contenant que les éléments qui satisfont une condition spécifique.
 
 ```javascript
-A FAIRE PAR VOS SOINS...
-SIMPLE, DROIT AU BUT, UTILE, STYLE PENSE-BÊTE
+const nombres = [1, 2, 3, 4, 5];
+const pairs = nombres.filter(n => n % 2 === 0);
+console.log(pairs); // [2, 4]
+```
+```javascript
+//Filtrer les motos avec une marque commençant par "H"
+    const resultat = dataMotos.filter(moto =>
+        moto.marque.startsWith("H")
+    );
+```
+## `groupBy()` - regroupe les éléments d'un tableau selon une règle
+
+Crée un **objet** où les clés correspondent au résultat de la fonction appliquée à chaque élément, et les valeurs sont des **tableaux d’éléments correspondants**.
+
+```javascript
+const nombres = [6.1, 4.2, 6.3];
+const groupes = nombres.groupBy(Math.floor);
+console.log(groupes); 
+// { '4': [4.2], '6': [6.1, 6.3] }
+```
+```javascript
+//Grouper les empereurs par dynastie
+const result = groupBy(empereurs, (empereur) => empereur.dynasty);
 ```
 
-## `groupBy()` - regroupe les éléments d'un tableau selon un règle
+## `flatMap()` - chaînage de `map()` et `flat()`
 
-Description à faire par vos soins...
-
-```javascript
-A FAIRE PAR VOS SOINS...
-SIMPLE, DROIT AU BUT, UTILE, STYLE PENSE-BÊTE
-```
-
-## `flatMap()` - chaînage de map() et flat()
-
-Description à faire par vos soins...
+Applique une fonction à chaque élément du tableau **comme `map()`**, puis **aplatit** le résultat d’un niveau.
 
 ```javascript
-A FAIRE PAR VOS SOINS...
-SIMPLE, DROIT AU BUT, UTILE, STYLE PENSE-BÊTE
+const phrases = ["Bonjour le monde", "Salut tout le monde"];
+const mots = phrases.flatMap(phrase => phrase.split(" "));
+console.log(mots); 
+// ["Bonjour", "le", "monde", "Salut", "tout", "le", "monde"]
+
 ```
 
 ## `reduce()` et `reduceRight()` - réduire un tableau à une seule valeur
 
-Description à faire par vos soins...
+Applique une **fonction cumulatrice** sur chaque élément du tableau pour produire **une seule valeur finale**.  
+- `reduce()` → de gauche à droite  
+- `reduceRight()` → de droite à gauche
 
 ```javascript
-A FAIRE PAR VOS SOINS...
-SIMPLE, DROIT AU BUT, UTILE, STYLE PENSE-BÊTE
+const nombres = [1, 2, 3, 4];
+
+// Somme de tous les éléments
+const somme = nombres.reduce((acc, val) => acc + val, 0);
+console.log(somme); // 10
+
+// Concaténation de droite à gauche
+const texte = ["a", "b", "c"].reduceRight((acc, val) => acc + val, "");
+console.log(texte); // "cba"
+
 ```
 
 ## `reverse()` - inverser l'ordre du tableau
 
-Description à faire par vos soins...
+Inverse **directement** l’ordre des éléments dans le tableau.
 
 ```javascript
-A FAIRE PAR VOS SOINS...
-SIMPLE, DROIT AU BUT, UTILE, STYLE PENSE-BÊTE
+const nombres = [1, 2, 3, 4];
+nombres.reverse();
+console.log(nombres); // [4, 3, 2, 1]
 ```
 
 <svg height="12" width="100%" style="padding-top:2em;padding-bottom:1em">
@@ -683,22 +769,42 @@ SIMPLE, DROIT AU BUT, UTILE, STYLE PENSE-BÊTE
 
 # Techniques
 
-## ``(backticks) - pour des expressions intelligentes
+## `` (backticks) - pour écrire des chaînes plus pratiques
 
-Description à faire par vos soins...
+Les **backticks** (`` ` ``) permettent de créer des chaînes de caractères **faciles à lire**, où l’on peut :  
+- Mettre directement des **variables** ou des calculs dedans  
+- Écrire du texte **sur plusieurs lignes**  
 
 ```javascript
-A FAIRE PAR VOS SOINS...
-SIMPLE, DROIT AU BUT, UTILE, STYLE PENSE-BÊTE
+const nom = "Alice";
+const age = 25;
+
+// Insérer des variables directement dans le texte
+const texte = `Bonjour, je m'appelle ${nom} et j'ai ${age} ans.`;
+console.log(texte);
+// Affiche : Bonjour, je m'appelle Alice et j'ai 25 ans.
+
+// Écrire sur plusieurs lignes facilement
+const multiLignes = `Ligne 1
+Ligne 2
+Ligne 3`;
+console.log(multiLignes);
+// Affiche :
+// Ligne 1
+// Ligne 2
+// Ligne 3
+
 ```
 
 ## `new Set()` - pour supprimer les doublons
 
-Description à faire par vos soins...
+Crée un **ensemble** contenant uniquement des valeurs uniques. Très pratique pour enlever les doublons d’un tableau.
 
 ```javascript
-A FAIRE PAR VOS SOINS...
-SIMPLE, DROIT AU BUT, UTILE, STYLE PENSE-BÊTE
+const nombres = [1, 2, 2, 3, 4, 4, 5];
+const unique = [...new Set(nombres)];
+console.log(unique); // [1, 2, 3, 4, 5]
+
 ```
 
 <svg height="12" width="100%" style="padding-top:2em;padding-bottom:1em">
