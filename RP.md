@@ -587,7 +587,7 @@ console.log(fruits); // ["pomme", "kiwi", "cerise"]
 fruits.splice(1, 1, "mangue");
 console.log(fruits); // ["pomme", "mangue", "cerise"]
 
-
+```
 ## `concat()` - joindre deux tableaux
 
 Crée un nouveau tableau en combinant plusieurs tableaux ou valeurs.
