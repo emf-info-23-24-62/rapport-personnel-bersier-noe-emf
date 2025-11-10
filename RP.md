@@ -873,4 +873,6 @@ ou
 
 # Conclusion
 
-> Votre conclusion avec les éléments usuels
+Durant ce module j'ai adoré travailler et découvrir une nouvelle manière de coder en Javascript, même si il m'a fallut un certain temps
+pour comprendre certaines fonctions comme le reduce. Je pense avoir appris un tas de chose super utile pour la suite de ma formation en 
+tant que développeurs web.
