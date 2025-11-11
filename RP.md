@@ -451,7 +451,7 @@ console.time("test");
 for(let i=0;i<100000;i++){}  // code à mesurer
 console.timeLog("test");      // temps intermédiaire
 console.timeEnd("test");      // temps total
-
+-
 ```
 
 <svg height="12" width="100%" style="padding-top:2em;padding-bottom:1em">
